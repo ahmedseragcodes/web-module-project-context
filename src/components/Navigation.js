@@ -5,8 +5,8 @@ import CartContext from "../contexts/cartContext";
 
 const Navigation = props => {
 
+const cart = useContext(CartContext);
 
-const {cart, removeItem}=useContext(CartContext);
 
 	return (
 		<CartContext.Consumer>
@@ -15,7 +15,7 @@ const {cart, removeItem}=useContext(CartContext);
 		<div className="navigation">
 			<NavLink to="/">Products</NavLink>
 			<NavLink to="/cart">
-				Cart <span>{cart.length}</span>
+				Cart <span>{cart.cart.length}</span>
 			</NavLink>
 		</div>
 			)}

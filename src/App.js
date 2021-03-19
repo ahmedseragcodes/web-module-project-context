@@ -29,6 +29,7 @@ function App() {
 		)
 	}
 
+	console.log(cart)
 	return (
 		<CartContext.Provider value={{cart, removeItem}}>
 		<div className="App">
